@@ -11,7 +11,7 @@ public class DefaultNoOperationHandler implements Handler<TdApi.Object> {
 
   @Override
   public void onTypedResult(final TdApi.Object object) {
-    System.out.println("Received update :" + object.getConstructor());
+    System.out.println("Received update :" + object.getConstructor() + ", TYPE" + object.getClass().getSimpleName());
   }
 
   @Override

@@ -1,11 +1,9 @@
-package com.github.vbychkovskyi.tg.client;
+package com.github.vbychkovskyi.tg.client.handle;
 
 import java.util.Map;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
-
-import com.github.vbychkovskyi.tg.client.handle.Handler;
 
 import lombok.RequiredArgsConstructor;
 

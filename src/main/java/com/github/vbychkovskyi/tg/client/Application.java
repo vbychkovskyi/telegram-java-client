@@ -8,6 +8,8 @@ import org.drinkless.tdlib.TdApi;
 import com.github.vbychkovskyi.tg.client.handle.AuthorizationStateWaitTdlibParametersHandler;
 import com.github.vbychkovskyi.tg.client.handle.DefaultNoOperationHandler;
 import com.github.vbychkovskyi.tg.client.handle.Handler;
+import com.github.vbychkovskyi.tg.client.handle.OnReadyHandler;
+import com.github.vbychkovskyi.tg.client.handle.RootHandler;
 
 public class Application {
 
@@ -32,7 +34,10 @@ public class Application {
     final Handler h1 =
       new AuthorizationStateWaitTdlibParametersHandler(client, resultHandler);
 
+    final OnReadyHandler h2 = new OnReadyHandler(client, resultHandler);
+
     hashMap.put(h1.getConstructor(), h1);
+    hashMap.put(h2.getConstructor(), h2);
 
     client.send(sendMessage, resultHandler);
   }
